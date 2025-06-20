@@ -37,7 +37,7 @@ function App() {
 
 function send() {
   setstatus(true)
-  axios.post("https://bulkmail-backend-nezp.onrender.com/sendmail", { msg: msg , emaillist:emaillist})
+  axios.post("https://bulkmail-backend-nezp.onrender.com/sendemail", { msg: msg , emaillist:emaillist})
     .then(function (data) {
       if (data.data == true) {
         alert("Email sent Sucessfully")
