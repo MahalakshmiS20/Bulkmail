@@ -10,14 +10,14 @@ mongoose.connect("mongodb+srv://mahalakshmisenthil208:123@cluster0.kyhtehy.mongo
     .then(() => { console.log("DB connnected") })
     .catch((error) => { console.log(error) })
 
-const creditanial = mongoose.model("creditanial", {}, "bulkmail")
+const credential = mongoose.model("credential", {}, "bulkmail")
 
 const nodemailer = require("nodemailer");
 
 app.post("/sendemail", function (req, res) {
     var msg = req.body.msg
     var emaillist = req.body.emaillist
-    creditanial.find().then((data) => {
+    credential.find().then((data) => {
     const transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
