@@ -4,7 +4,7 @@ const cors = require("cors")
 const mongoose = require("mongoose")
 
 app.use(cors({
-  origin: "https://bulkmail-lag6.onrender.com"
+  origin: "https://bulkmail-lag6.onrender.com",
   methods: ["GET", "POST"]
 }))
 app.use(express.json())
