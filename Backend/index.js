@@ -3,10 +3,7 @@ const app = express()
 const cors = require("cors")
 const mongoose = require("mongoose")
 
-app.use(cors({
-  origin: "https://bulkmail-lag6.onrender.com",
-  methods: ["GET", "POST"]
-}))
+app.use(cors())
 app.use(express.json())
 
 mongoose.connect("mongodb+srv://mahalakshmisenthil208:123@cluster0.kyhtehy.mongodb.net/passkey?retryWrites=true&w=majority&appName=Cluster0")
