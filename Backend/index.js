@@ -3,7 +3,10 @@ const app = express()
 const cors = require("cors")
 const mongoose = require("mongoose")
 
-app.use(cors())
+app.use(cors({
+  origin: "https://bulkmail-91zz-hpxuwi9i5-mahalakshmi-ss-projects-e36813bf.vercel.app",
+  methods: ["GET", "POST"]
+}))
 app.use(express.json())
 
 mongoose.connect("mongodb+srv://mahalakshmisenthil208:123@cluster0.kyhtehy.mongodb.net/passkey?retryWrites=true&w=majority&appName=Cluster0")
